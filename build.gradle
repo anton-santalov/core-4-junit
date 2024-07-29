@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'java-library'
+    id 'application'
 }
 
 group = 'ru.netology'
@@ -11,9 +13,14 @@ repositories {
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.2'
+    implementation 'com.opencsv:opencsv:5.1'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
 }
 
 test {
     useJUnitPlatform()
 }
+
+mainClassName = "ru.netology.Main"
